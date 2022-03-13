@@ -1,0 +1,8 @@
+.ipynb_checkpoints/
+*.pdf
+debug.log
+.git
+/serverless-fastapi/venv
+/serverless-fastapi/app/api/api_v1/common
+/serverless-fastapi/function.zip
+/serverless-fastapi/app/api/api_v1/routes/services.py
