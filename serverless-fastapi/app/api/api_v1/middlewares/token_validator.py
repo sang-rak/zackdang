@@ -108,7 +108,7 @@ async def access_control(request: Request, call_next):
                         raise ex.NotAuthorized()
         else:
             # 템플릿 렌더링인 경우 쿠키에서 토큰 검사 
-            cookies["Authorization"] = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTEsImVtYWlsIjoidXNlckBleGFtcGxlLmNvbSIsIm5hbWUiOm51bGwsInBob25lX251bWJlciI6bnVsbCwicHJvZmlsZV9pbWciOm51bGwsInNuc190eXBlIjpudWxsfQ.nfFB9uATHhDUMfX9K1s3Z0FF2_bfMSxW5vPLTUfcg1Q"
+            cookies["Authorization"] = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTUsImVtYWlsIjoidXNlckBleGFtcGxlLmNvbSIsIm5hbWUiOm51bGwsInBob25lX251bWJlciI6bnVsbCwicHJvZmlsZV9pbWciOm51bGwsInNuc190eXBlIjpudWxsfQ.HZE1Uf1qJkv6pKyALaNkjqQ_I4BKkkkgD6wEMdTTlgo"
 
             if "Authorization" not in cookies.keys():
                 raise ex.NotAuthorized()
