@@ -60,6 +60,13 @@ class UserMe(BaseModel):
     phone_number: str = None
     profile_img: str = None
     sns_type: str = None
+    location: str = None
+    hobby: str = None
+    mbti: str = None
+    status: str = None
+    gender: str = None
+    age: int = None
+
 
     class Config:
         orm_mode = True

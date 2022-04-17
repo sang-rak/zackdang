@@ -4,6 +4,7 @@ from uuid import uuid4
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from starlette.requests import Request
+from starlette.responses import JSONResponse
 
 from app.api.api_v1.common.consts import MAX_API_KEY, MAX_API_WHITELIST
 from app.api.api_v1.database.conn import db
@@ -26,8 +27,10 @@ async def get_me(request: Request):
 
 
 @router.put('/me')
-async def put_me(request: Request):
-    ...
+async def put_me(request: Request, userme: UserMe):
+    user = request.state.user
+    Users.filter(id=user.id).update(auto_commit=True, **userme.dict())
+    return {"user_id": userme}
 
 
 @router.delete('/me')

@@ -177,6 +177,11 @@ class Users(Base, BaseMixin):
     sns_type = Column(Enum("FB", "G", "K","Email"), nullable=True)
     marketing_agree = Column(Boolean, nullable=True, default=True)
     keys = relationship("ApiKeys", back_populates="users")
+    location = Column(String(length=50), nullable=True)
+    hobby = Column(String(length=50), nullable=True)
+    mbti = Column(String(length=50), nullable=True)
+    gender = Column(String(length=1), nullable=True)
+    age = Column(Integer, nullable=False)
 
 
 class ApiKeys(Base, BaseMixin):

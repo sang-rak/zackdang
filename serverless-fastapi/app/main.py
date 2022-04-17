@@ -22,6 +22,7 @@ c = conf()
 app = FastAPI(
     title="serverless-fastapi",
     version=0.1,
+    # 운영에서는 활성화
     # root_path="/dev"
 
     ) 
