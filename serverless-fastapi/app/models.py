@@ -74,7 +74,8 @@ class UserMe(BaseModel):
 
 class AddApiKey(BaseModel):
     user_memo: str = None
-
+    status: str = None
+    
     class Config:
         orm_mode = True
 

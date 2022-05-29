@@ -10,5 +10,6 @@ router = APIRouter()
 
 router.include_router(index.router)
 router.include_router(auth.router, tags=["Authentication"])
-router.include_router(services.router, tags=["Services"], prefix="/api", dependencies=[Depends(API_KEY_HEADER)])
-router.include_router(users.router, tags=["Users"], prefix="/api", dependencies=[Depends(API_KEY_HEADER)]) # 토큰 검사가 필요한경우 사용
+router.include_router(services.router, tags=["Services"], prefix="/api", dependencies=[Depends(API_KEY_HEADER)]) # 토큰 검사가 필요한경우 사용
+router.include_router(users.router, tags=["Users"], prefix="/api", dependencies=[Depends(API_KEY_HEADER)]) 
+
